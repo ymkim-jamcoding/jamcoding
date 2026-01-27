@@ -325,9 +325,10 @@ function appendRemark(option: SlideOptions, baseUrl: string | undefined) {
 
   const script = document.createElement("script")
   script.src = `${window.location.origin}/static/scripts/slide.js`
+  console.log("baseUrl:", baseUrl)
 
   if (baseUrl) {
-    script.src = `${baseUrl}/static/scripts/slide.js`
+    script.src = `${baseUrl}static/scripts/slide.js`
   }
 
   // script.src = `https://codeyoma.github.io/static/scripts/remark.js`
