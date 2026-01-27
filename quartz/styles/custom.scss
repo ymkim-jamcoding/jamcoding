@@ -1,6 +1,378 @@
 @use "./base.scss";
+@use "./variables.scss" as *;
 
 // put your custom CSS here!
+
+body {
+  position: relative;
+  min-height: 100vh;
+
+  // only allow synthesizing italics but not bold
+  font-synthesis: style;
+}
+
+footer {
+  margin-top: 3em;
+
+  & p {
+    font-size: small;
+  }
+}
+
+.explorer-content li {
+  padding: 0.2em 0;
+
+  @media (#{$desktop}) {
+    padding: 0.4em 0;
+    line-height: 1.3;
+  }
+}
+
+.center li {
+  margin-left: 0.3em;
+  margin-top: 0.3em;
+
+  img,
+  video,
+  audio,
+  iframe,
+  pre,
+  code,
+  svg {
+    vertical-align: top;
+  }
+
+  @media (#{$desktop}) {
+    margin: 0.6em 0;
+  }
+
+}
+
+.center .tags li {
+  margin: 0.1em 0;
+
+  @media (#{$desktop}) {
+    margin: 0.1em 0;
+  }
+}
+
+ol li {
+  list-style-type: decimal-leading-zero;
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+.left.sidebar,
+.right.sidebar {
+  li {
+    list-style-type: none;
+  }
+}
+
+footer {
+  li {
+    list-style-type: none;
+  }
+}
+
+.tag-link {}
+
+.center ul {
+  padding-left: 1.2em;
+
+  @media (#{$desktop}) {
+    padding-left: 1.4em;
+  }
+}
+
+.footnotes {
+  background-color: transparent;
+  border-top: none;
+
+  &:before {
+    content: "* * *";
+    display: flex;
+    font-size: 1.5rem;
+    color: var(--gray);
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+}
+
+.footnotes ol {
+  padding-left: 1.2em;
+
+  @media (#{$desktop}) {
+    padding-left: 1.4em;
+  }
+}
+
+.center .page-header {
+  margin-bottom: 1em;
+}
+
+.center h1.article-title {
+  color: var(--primary);
+  font-size: 2.5em;
+
+  &:after,
+  &:before {
+    content: ""
+  }
+
+}
+
+h1 {
+  color: var(--tertiary);
+  margin-top: 0.5em;
+}
+
+.center h1:before {
+  content: "* * *";
+  display: flex;
+  font-size: 1.5rem;
+  color: var(--gray);
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+@for $i from 1 through 6 {
+  .center h#{$i}[id]::after {
+    content: "H#{$i}";
+    font-size: 0.5em;
+    vertical-align: super;
+    margin-left: 0.25em;
+    color: var(--gray);
+  }
+
+  .center h#{$i}[id]>a[href^=\#] {
+    position: absolute;
+    margin: 0 1.5rem;
+  }
+}
+
+.page>#quartz-body>.sidebar.right>.toc {
+
+  @media (#{$desktop}) {
+    li {
+      margin: 0.4em 0;
+    }
+  }
+
+  // @for $i from 0 through 5 {
+  //     .depth-#{$i} {
+  //         font-size: #{1 - ($i * 0.05)}em;
+  //     }
+  // }
+
+  // .depth-0 {
+  //     font-size: 1em;
+  // }
+
+  .depth-1 {
+    font-size: 0.85em;
+  }
+
+  .depth-2 {
+    font-size: 0.77em;
+  }
+
+  .depth-3 {
+    font-size: 0.70em;
+  }
+
+  .depth-4 {
+    font-size: 0.65em;
+  }
+
+  .depth-5 {
+    font-size: 0.6em;
+  }
+}
+
+.page>#quartz-body .sidebar {
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @media (min-width: #{$pageWidth}) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    // padding: 6rem 2rem 2rem;
+  }
+}
+
+.page>#quartz-body .left {
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (min-width: #{$pageWidth}) {
+    padding-left: 0.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.page>#quartz-body {
+  @media (max-width: #{$pageWidth}) {
+    .sidebar.left:has(.explorer) {
+      background-color: transparent;
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      padding: 0.5rem 0;
+      border-radius: 0 0 8px 8px;
+    }
+
+    .flex-container {
+      padding-right: 1rem;
+    }
+  }
+}
+
+.page>#quartz-body .right {
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @media (min-width: #{$pageWidth}) {
+    padding-left: 1.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+.popover .section {
+  grid-template-columns: minmax(0, 1fr) fit-content(8em);
+}
+
+.page-listing {
+  li.section-li {
+
+    &>.section {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) fit-content(8rem) !important;
+
+      &>.desc {
+        background-color: transparent;
+        min-width: 0;
+
+        h4,
+        h5,
+        h6 {
+          margin: 0;
+        }
+
+        &>a {
+          word-break: keep-all;
+        }
+      }
+
+      &>.meta {
+        margin: 0 1em 0 0;
+        opacity: 0.6;
+      }
+
+      &>.tags {
+        display: flex;
+        padding: 0;
+        margin-top: 0.2em;
+        margin-bottom: 0.6em;
+        justify-content: start;
+      }
+
+    }
+  }
+
+}
+
+.before-footer {
+  grid-area: grid-before-footer;
+  padding-top: 1rem;
+
+  @media (#{$desktop}) {
+    padding-top: 0;
+  }
+}
+
+.page>#quartz-body .page-footer {
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+
+  @media (#{$desktop}) {
+    margin-bottom: 3rem;
+    margin-top: 5rem;
+  }
+}
+
+strong {
+  color: var(--tertiary);
+}
+
+em {
+  padding-right: 0.2em;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.flex-child {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: center;
+}
+
+.flex-child.flex-desktop-only {
+  display: none;
+}
+
+
+@media (min-width: 1025px) {
+  .flex-container {
+    flex-wrap: wrap;
+  }
+
+  .flex-child.first-child {
+    flex-grow: 1;
+    flex-basis: 100%;
+    order: 42;
+  }
+
+  .flex-child.other-child {
+    flex-basis: auto;
+  }
+
+  .flex-child.flex-desktop-only {
+    display: block;
+  }
+
+}
+
+hr {
+  overflow: visible;
+  padding: 0;
+  height: 0;
+  margin: 2em auto;
+  border: none;
+  text-align: center;
+  width: 100%;
+
+  &:after {
+    content: "* * *";
+    display: inline-block;
+    margin: -1em 0 0.5em;
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+    color: var(--gray);
+  }
+}
+
+// slide plugin
 
 .remark-slide-scaler {
   // -webkit-font-smoothing: antialiased;
@@ -37,13 +409,13 @@
       }
     }
 
-    // h#{$i}:before {
-    //   content: "H#{$i}";
-    //   font-size: 0.5em;
-    //   vertical-align: super;
-    //   margin-right: 1em;
-    //   color: var(--gray);
-    // }
+    h#{$i}:before {
+      content: "H#{$i}";
+      font-size: 0.5em;
+      vertical-align: super;
+      margin-right: 1em;
+      color: var(--gray);
+    }
   }
 
   .slide-index-list {
@@ -131,5 +503,283 @@
         margin: auto 0;
       }
     }
+  }
+}
+
+
+// dappled
+#quartz-root {
+  isolation: isolate;
+}
+
+// fade-in elements
+body.animation-ready #quartz-body {
+  [saved-theme="dark"] & {
+    --animation-name: fade2;
+  }
+
+  [saved-theme="light"] & {
+    --animation-name: fade;
+  }
+
+  @for $i from 1 through 4 {
+    @for $j from 1 through 8 {
+      &>*:nth-child(#{$i})>*:nth-child(#{$j}) {
+        animation: var(--animation-name) 2s ease 1 normal backwards;
+        animation-delay: #{0.1 * $j + 0.4 * $i}s;
+      }
+    }
+  }
+}
+
+// hack to duplicate the fade-in animation so that we reset the animation in both directions
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// dappled light
+#dappled-light {
+  animation-duration: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  pointer-events: none;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  isolation: isolate;
+
+  --day: #fffdfa;
+  --evening: #fccc83;
+  --dusk: #db7a2a;
+  --night: #0f131c;
+  --dawn: #16132b;
+  --morning: #9fb3bf;
+
+  --shadow: #1a1917;
+  --bounce-light: #fffffc;
+  --timing-fn: cubic-bezier(0.455, 0.19, 0, 0.985);
+
+  body.animation-ready & {
+    animation-play-state: running;
+    animation-duration: 1s;
+    animation-name: sunrise;
+  }
+
+  [saved-theme="dark"] body.animation-ready & {
+    animation-duration: 1.5s;
+    animation-name: sunset;
+  }
+
+  [saved-theme="dark"] & {
+    --shadow: #030307;
+    --bounce-light: #1b293f;
+  }
+
+  &>#progressive-blur {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    &>div {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      backdrop-filter: blur(var(--blur-amount));
+      mask-image: linear-gradient(252deg,
+          transparent,
+          transparent var(--stop1),
+          black var(--stop2),
+          black);
+
+      &:nth-child(1) {
+        --blur-amount: 8px;
+        --stop1: 0%;
+        --stop2: 0%;
+      }
+
+      &:nth-child(2) {
+        --blur-amount: 72px;
+        --stop1: 30%;
+        --stop2: 60%;
+      }
+    }
+  }
+
+  #glow {
+    position: absolute;
+    background: linear-gradient(309deg, var(--bounce-light), var(--bounce-light) 20%, transparent);
+    transition: background 1s var(--timing-fn);
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+  }
+
+  #glow-bounce {
+    content: "";
+    position: absolute;
+    background: linear-gradient(355deg, var(--bounce-light) 0%, transparent 30%, transparent 100%);
+    transition: background 1s var(--timing-fn);
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+  }
+
+  &>.perspective {
+    position: absolute;
+    transition:
+      transform 1.7s var(--timing-fn),
+      opacity 4s ease;
+    top: -30vh;
+    right: 0;
+    width: 80vw;
+    height: 130vh;
+    opacity: 0.07;
+    background-blend-mode: darken;
+    transform-origin: top right;
+    transform-style: preserve-3d;
+    transform: matrix3d(0.75, -0.0625, 0, 0.0008, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+
+    [saved-theme="dark"] & {
+      opacity: 0.3;
+      transform: matrix3d(0.8333, 0.0833, 0, 0.0003, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+    }
+  }
+
+  #leaves {
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 0px;
+    right: -600px;
+    width: 1600px;
+    height: 1400px;
+    background-image: url("/static/leaves.png");
+    perspective: 400px;
+    animation: billow 8s ease-in-out infinite;
+  }
+
+  #blinds {
+    position: relative;
+    width: 100%;
+
+    & .shutter,
+    & .bar {
+      background-color: var(--shadow);
+    }
+
+    & .shutter {
+      width: 100%;
+      height: 40px;
+      transition: height 1s var(--timing-fn);
+
+      [saved-theme="dark"] & {
+        height: 80px;
+      }
+    }
+
+    & .shutters {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      gap: 60px;
+      transition: gap 1s var(--timing-fn);
+
+      [saved-theme="dark"] & {
+        gap: 20px;
+      }
+    }
+
+    &>.vertical {
+      top: 0;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+
+      &>.bar {
+        width: 12px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@keyframes sunrise {
+  0% {
+    background-color: var(--night);
+  }
+
+  10% {
+    background-color: var(--dawn);
+  }
+
+  35% {
+    background-color: var(--morning);
+  }
+
+  100% {
+    background-color: var(--day);
+  }
+}
+
+@keyframes sunset {
+  0% {
+    background-color: var(--day);
+  }
+
+  30% {
+    background-color: var(--evening);
+  }
+
+  60% {
+    background-color: var(--dusk);
+  }
+
+  90% {
+    background-color: var(--dawn);
+  }
+
+  100% {
+    background-color: var(--night);
+  }
+}
+
+@keyframes billow {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+  }
+
+  18% {
+    transform: rotateX(1deg) rotateY(2deg) scale(1.03);
+  }
+
+  32% {
+    transform: rotateX(-4deg) rotateY(-2deg) scale(0.96);
+  }
+
+  66% {
+    transform: rotateX(3deg) rotateY(-1deg) scale(1.04);
+  }
+
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
   }
 }
