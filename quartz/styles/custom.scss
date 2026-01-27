@@ -783,3 +783,9 @@ body.animation-ready #quartz-body {
     transform: rotateX(0deg) rotateY(0deg) scale(1);
   }
 }
+
+span[style="highlight"], .highlight {
+  background-color: #fff3b0;
+  padding: 0 0.15em;
+  border-radius: 4px;
+}
