@@ -295,7 +295,7 @@ h6 {
   }
 }
 
-function appendRemark(option: SlideOptions, baseUrl: string | undefined) {
+function appendRemark(option: SlideOptions) {
 
   const header = `${document.querySelector(".page-header h1.article-title")?.outerHTML}`
   const tags = document.querySelector(".page-header .tags")?.outerHTML ?? ""
@@ -324,12 +324,7 @@ function appendRemark(option: SlideOptions, baseUrl: string | undefined) {
   document.body.innerHTML = ""
 
   const script = document.createElement("script")
-  script.src = `${window.location.origin}/static/scripts/slide.js`
-  console.log("baseUrl:", baseUrl)
-
-  if (baseUrl) {
-    script.src = `${baseUrl}static/scripts/slide.js`
-  }
+  script.src = `${window.location.origin}/jamcoding/static/scripts/slide.js`
 
   // script.src = `https://codeyoma.github.io/static/scripts/remark.js`
 
@@ -393,7 +388,6 @@ document.addEventListener("nav", async () => {
   async function renderSlide() {
     const slideContainers = document.getElementsByClassName("slide-button")
     const option = (slideContainers[0] as HTMLElement).dataset["cfg"]
-    const baseUrl = (slideContainers[0] as HTMLElement).dataset["baseurl"]
 
     if (!option) {
       console.warn("No slide configuration found in the clicked element.")
@@ -401,7 +395,7 @@ document.addEventListener("nav", async () => {
     }
 
     const mergedOption = paramOption(JSON.parse(option))
-    appendRemark(mergedOption, baseUrl)
+    appendRemark(mergedOption)
   }
 
   function hideSlide() {
