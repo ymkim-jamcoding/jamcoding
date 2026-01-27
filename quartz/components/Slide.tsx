@@ -42,9 +42,10 @@ const defaultOptions: SlideOptions = {
 }
 
 export default ((opts?: Partial<SlideOptions>) => {
-  const Slide: QuartzComponent = ({ displayClass, fileData }: QuartzComponentProps) => {
+  const Slide: QuartzComponent = ({ displayClass, fileData, cfg }: QuartzComponentProps) => {
 
     const option: SlideOptions = { ...defaultOptions, ...opts }
+    const baseUrl = cfg.baseUrl ?? ""
 
     const button = (
       <svg
@@ -64,6 +65,7 @@ export default ((opts?: Partial<SlideOptions>) => {
     return (
       <div class={classNames(displayClass, "slide-button")}
         data-cfg={JSON.stringify(option)}
+        data-base-url={baseUrl}
       >
         <button class="slide-icon" aria-label="Slide Toggle">
           {button}
