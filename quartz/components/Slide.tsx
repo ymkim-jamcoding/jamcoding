@@ -65,7 +65,7 @@ export default ((opts?: Partial<SlideOptions>) => {
     return (
       <div class={classNames(displayClass, "slide-button")}
         data-cfg={JSON.stringify(option)}
-        data-base-url={baseUrl}
+        data-baseurl={baseUrl}
       >
         <button class="slide-icon" aria-label="Slide Toggle">
           {button}

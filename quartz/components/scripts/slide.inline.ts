@@ -392,7 +392,7 @@ document.addEventListener("nav", async () => {
   async function renderSlide() {
     const slideContainers = document.getElementsByClassName("slide-button")
     const option = (slideContainers[0] as HTMLElement).dataset["cfg"]
-    const baseUrl = (slideContainers[0] as HTMLElement).dataset["baseUrl"]
+    const baseUrl = (slideContainers[0] as HTMLElement).dataset["baseurl"]
 
     if (!option) {
       console.warn("No slide configuration found in the clicked element.")
