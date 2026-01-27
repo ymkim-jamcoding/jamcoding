@@ -1,3 +1,135 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+.remark-slide-scaler {
+  // -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.remark-slide-content {
+  background-color: var(--light);
+
+  &:first-of-type {
+    padding: 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  @for $i from 1 through 6 {
+
+    h#{$i} {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background-color: color-mix(in srgb, var(--light) 80%, transparent);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      padding-top: 1.5rem;
+      width: 100%;
+      display: flex;
+      align-items: baseline;
+
+      &>a {
+        display: none;
+      }
+    }
+
+    // h#{$i}:before {
+    //   content: "H#{$i}";
+    //   font-size: 0.5em;
+    //   vertical-align: super;
+    //   margin-right: 1em;
+    //   color: var(--gray);
+    // }
+  }
+
+  .slide-index-list {
+    font-size: x-large;
+    margin: 0 auto;
+    margin-top: 1rem;
+  }
+
+  .slide-index-title {
+    display: grid;
+    justify-content: center;
+
+    &:before {
+      content: ""
+    }
+  }
+
+  .article-title {
+    display: grid;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+
+    &:before {
+      content: ""
+    }
+  }
+
+  .tags {
+    gap: .6rem;
+  }
+
+  li {
+    line-height: 1.8;
+    list-style-position: outside;
+
+    img,
+    video,
+    audio,
+    iframe,
+    svg {
+      vertical-align: top;
+    }
+
+    blockquote {
+      margin-left: 0;
+    }
+
+  }
+
+  p {
+    line-height: 1.8;
+  }
+
+  .remark-slide-number {}
+
+  pre {
+    padding: 0;
+
+    code {
+      padding: .5rem;
+      font-size: large;
+    }
+  }
+
+  img {
+    margin: 0 0;
+    max-width: 95%;
+  }
+
+  video,
+  audio,
+  iframe {
+    margin: 10px 0;
+    width: 100%;
+    max-width: 95%;
+  }
+
+  .callout {
+
+    .callout-title {
+
+      .callout-icon {
+        margin: auto 0;
+      }
+    }
+  }
+}
