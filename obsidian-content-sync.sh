@@ -4,11 +4,15 @@
 
 basic_path="/Users/yoma/Library/Mobile Documents/iCloud~md~obsidian/Documents/Yoma"
 allow_path=(
-  "/@ Projects/잼코딩/특강/"
+  "/@ Projects/잼코딩/학습 자료/개발/"
+  "/@ Projects/잼코딩/학습 자료/알고리즘/"
+  "/@ Projects/잼코딩/학습 자료/이산 수학/"
 )
 
 output_path=(
-  "특강/"
+  "개발/"
+  "알고리즘/"
+  "이산 수학/"
 )
 
 pre_fix="./content/"
