@@ -2,4 +2,4 @@
 	- No
 	- ![[image-Meme.png]]
 - PS 대회 나의 상대들
-	- ![[image-Meme-1.png]]
+	- ![[image-Meme-2.png]]
