@@ -9,6 +9,7 @@ allow_path=(
   "/@ Projects/잼코딩/blog/이산 수학/"
   "/@ Projects/잼코딩/blog/언어/"
   "/@ Projects/잼코딩/blog/MISC/"
+  "/@ Projects/잼코딩/blog/index.md"
 )
 
 output_path=(
@@ -17,6 +18,7 @@ output_path=(
   "이산 수학/"
   "언어/"
   "MISC/"
+  "index.md"
 )
 
 pre_fix="./content/"
