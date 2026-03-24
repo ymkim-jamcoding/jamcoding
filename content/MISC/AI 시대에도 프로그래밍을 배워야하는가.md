@@ -1,3 +1,10 @@
+---
+description:
+aliases:
+created: 2026-03-20
+modified: 2026-03-24
+---
+
 # Reference
 - [\</\> htmx \~ Yes, and...](https://htmx.org/essays/yes-and/)
 - kor version - [AI 시대에도 프로그래밍을 배워야 하는가 \| GeekNews](https://news.hada.io/topic?id=27550)
