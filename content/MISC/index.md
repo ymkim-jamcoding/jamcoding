@@ -3,7 +3,7 @@ description:
 aliases:
   - "- 이모저모"
 created: 2026-03-31
-modified: 2026-03-31
+modified: 2026-04-02
 ---
 
 # 스타링크 위성군
@@ -11,3 +11,6 @@ modified: 2026-03-31
 
 # 아르테미스 2호 달 로켓
 - [NASA's Artemis II Live Views from Kennedy Space Center - YouTube](https://www.youtube.com/watch?v=NaJklsJonD4)
+
+# CV-Gallery
+- [cv gallery](https://jcd.kr/cv-gallery)
