@@ -308,7 +308,7 @@ class NumberSquadRaid:
                     if self.state in {"title", "gameover", "win"} and event.key in {
                         pygame.K_SPACE,
                         pygame.K_RETURN,
-                        pygame.K_R,
+                        pygame.K_r,
                     }:
                         self.start_game()
 
