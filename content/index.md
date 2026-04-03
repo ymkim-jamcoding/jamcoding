@@ -14,3 +14,6 @@ title: Jamcoding - 용만쌤 블로그
 - [Hacker News](https://news.ycombinator.com/news)
 - [AI Frontier](https://aifrontier.kr/ko/)
 - [오늘의 AI 뉴스, 글로벌 트렌드 한국어 요약](https://aitrends.kr/)
+
+# Tinkercad
+- [Classroom login - Tinkercad](https://www.tinkercad.com/joinclass/G3PY3VJ3T)
