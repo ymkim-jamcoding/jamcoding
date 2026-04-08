@@ -8,7 +8,7 @@ sync:
 update:
 	npx quartz update
 
-test: sync
+test:
 	npx quartz build --serve
 
 build:
