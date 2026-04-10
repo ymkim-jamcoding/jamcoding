@@ -2,7 +2,7 @@
 description:
 aliases:
 created: 2026-03-20
-modified: 2026-04-02
+modified: 2026-04-10
 title: Jamcoding - 용만쌤 블로그
 ---
 
@@ -10,10 +10,19 @@ title: Jamcoding - 용만쌤 블로그
 - 안뇽 칭구들
 
 # News
-- [GeekNews - 개발/기술/스타트업 뉴스 서비스](https://news.hada.io/)
-- [Hacker News](https://news.ycombinator.com/news)
-- [AI Frontier](https://aifrontier.kr/ko/)
-- [오늘의 AI 뉴스, 글로벌 트렌드 한국어 요약](https://aitrends.kr/)
+- kor
+	- [GeekNews - 개발/기술/스타트업 뉴스 서비스](https://news.hada.io/)
+	- [AI Frontier](https://aifrontier.kr/ko/)
+	- [오늘의 AI 뉴스, 글로벌 트렌드 한국어 요약](https://aitrends.kr/)
+- global
+	- [Hacker News](https://news.ycombinator.com/news)
+	- [InfoQ: Software Development News, Trends & Best Practices - InfoQ](https://www.infoq.com/)
+	- [DZone: Programming & DevOps news, tutorials & tools](https://dzone.com/)
+	- [TechCrunch \| Startup and Technology News](https://techcrunch.com/)
+	- [WIRED - The Latest in Technology, Science, Culture and Business \| WIRED](https://www.wired.com/)
+	- [Product Hunt – The best new products in tech.](https://www.producthunt.com/)
+	- [Trending repositories on GitHub today · GitHub](https://github.com/trending)
+	- [xkcd: Overton](https://xkcd.com/)
 
 # Tinkercad
 - [Classroom login - Tinkercad](https://www.tinkercad.com/joinclass/G3PY3VJ3T)
