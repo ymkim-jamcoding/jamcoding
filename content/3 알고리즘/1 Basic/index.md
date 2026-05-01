@@ -1,8 +1,14 @@
 ---
 description:
 aliases:
+  - "- Basic"
 created: 2026-05-01
 modified: 2026-05-01
+title: "- Basic"
+tags:
+  - moc
+status:
+  - 🗺️
 ---
 
 # 알고리즘 설명서
