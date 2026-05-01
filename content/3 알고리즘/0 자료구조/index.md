@@ -1,8 +1,14 @@
 ---
 description:
 aliases:
+  - "- 0 자료구조"
 created: 2025-09-10
 modified: 2025-09-11
+title: "- 0 자료구조"
+status:
+  - 🗺️
+tags:
+  - moc
 ---
 
 # 자료구조?
