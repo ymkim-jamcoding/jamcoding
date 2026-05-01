@@ -23,7 +23,9 @@ import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
+import ScrollProgress from "./ScrollProgress"
 import Slide from './Slide'
+import Mindmap from './Mindmap'
 
 export {
   ArticleTitle,
@@ -51,5 +53,7 @@ export {
   Comments,
   Flex,
   ConditionalRender,
-  Slide
+  ScrollProgress,
+  Slide,
+  Mindmap
 }

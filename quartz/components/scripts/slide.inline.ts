@@ -324,12 +324,7 @@ function appendRemark(option: SlideOptions) {
   document.body.innerHTML = ""
 
   const script = document.createElement("script")
-  script.src = `${window.location.origin}/jamcoding/static/scripts/slide.js`
-
-  if (window.location.origin.includes("localhost")) {
-    script.src = `${window.location.origin}/static/scripts/slide.js`
-  }
-
+  script.src = `${window.location.origin}/static/scripts/slide.js`
   // script.src = `https://codeyoma.github.io/static/scripts/remark.js`
 
   script.onload = () => {

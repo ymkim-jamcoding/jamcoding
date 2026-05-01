@@ -78,13 +78,21 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
             }
 
             const tags = coerceToArray(coalesceAliases(data, ["tags", "tag"]))
-            if (tags) data.tags = [...new Set(tags.map((tag: string) => slugTag(tag)))]
+            if (tags) {
+              data.tags = [...new Set(tags.map((tag: string) => slugTag(tag)))]
+              data.tags = data.tags.filter((tag: string) => tag !== "review")
+            }
 
             const aliases = coerceToArray(coalesceAliases(data, ["aliases", "alias"]))
             if (aliases) {
               data.aliases = aliases // frontmatter
               file.data.aliases = getAliasSlugs(aliases)
               allSlugs.push(...file.data.aliases)
+            }
+
+            if (data.status == "🗺️") {
+              data.title = "🗺️ " + data.title
+              // data.comments = false
             }
 
             if (data.permalink != null && data.permalink.toString() !== "") {
@@ -138,20 +146,20 @@ declare module "vfile" {
     frontmatter: { [key: string]: unknown } & {
       title: string
     } & Partial<{
-        tags: string[]
-        aliases: string[]
-        modified: string
-        created: string
-        published: string
-        description: string
-        socialDescription: string
-        publish: boolean | string
-        draft: boolean | string
-        lang: string
-        enableToc: string
-        cssclasses: string[]
-        socialImage: string
-        comments: boolean | string
-      }>
+      tags: string[]
+      aliases: string[]
+      modified: string
+      created: string
+      published: string
+      description: string
+      socialDescription: string
+      publish: boolean | string
+      draft: boolean | string
+      lang: string
+      enableToc: string
+      cssclasses: string[]
+      socialImage: string
+      comments: boolean | string
+    }>
   }
 }

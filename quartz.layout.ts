@@ -4,12 +4,24 @@ import * as Component from "./quartz/components"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
-  afterBody: [],
+  header: [
+  ],
+  afterBody: [
+    Component.Backlinks({ hideWhenEmpty: false }),
+    Component.Mindmap(),
+    Component.Mindmap({
+      mode: "global",
+      globalOptions: {}
+    }),
+  ],
+  beforeFooter: [
+    Component.ScrollProgress()
+  ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/ymkim-jamcoding/jamcoding",
-      // "Discord Community": "https://discord.gg/cRFFHYye7t",
+      Home: "/",
+      // About: "/About",
+      "Blog source": "https://github.com/ymkim-jamcoding/jamcoding",
     },
   }),
 }
@@ -34,28 +46,61 @@ export const defaultContentPageLayout: PageLayout = {
           Component: Component.Search(),
           grow: true,
         },
+        {
+          Component: Component.DesktopOnly(Component.ReaderMode()),
+          desktopOnly: true,
+        },
         { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
+        { Component: Component.Mindmap({ mode: "button", localOptions: {} }) },
         {
           Component: Component.Slide({
             tags: false,
             align: "center"
           })
-        },
+        }
       ],
+    },
+    ),
+    Component.Explorer({
+      folderClickBehavior: "link",
+      useSavedState: false,
+      sortFn: (a, b) => {
+        if (!a.isFolder && a.slug === 'About')
+          return -99
+        if (!b.isFolder && b.slug === 'About')
+          return 99
+
+
+        if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
+          return a.displayName.localeCompare(b.displayName, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          })
+        }
+
+        if (!a.isFolder && b.isFolder) {
+          return 1
+        } else {
+          return -1
+        }
+      },
     }),
-    Component.Explorer(),
+    // Component.RecentNotes({ limit: 5}),
   ],
   right: [
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
   ],
 }
 
 // components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
-  beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
+  beforeBody: [
+    Component.Breadcrumbs(),
+    Component.ArticleTitle(),
+    Component.ContentMeta(),
+    Component.TagList()
+  ],
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
@@ -65,10 +110,48 @@ export const defaultListPageLayout: PageLayout = {
           Component: Component.Search(),
           grow: true,
         },
+        {
+          Component: Component.DesktopOnly(Component.ReaderMode()),
+          desktopOnly: true,
+        },
         { Component: Component.Darkmode() },
+        { Component: Component.Mindmap({ mode: "button", localOptions: {} }) },
+        {
+          Component: Component.Slide({
+            tags: false,
+            align: "center"
+          })
+        }
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      folderClickBehavior: "link",
+      useSavedState: false,
+      sortFn: (a, b) => {
+        if (!a.isFolder && a.slug === 'About')
+          return -99
+        if (!b.isFolder && b.slug === 'About')
+          return 99
+
+
+        if ((!a.isFolder && !b.isFolder) || (a.isFolder && b.isFolder)) {
+          return a.displayName.localeCompare(b.displayName, undefined, {
+            numeric: true,
+            sensitivity: "base",
+          })
+        }
+
+        if (!a.isFolder && b.isFolder) {
+          return 1
+        } else {
+          return -1
+        }
+      },
+    }
+    ),
   ],
-  right: [],
+  right: [
+    Component.Graph(),
+    Component.DesktopOnly(Component.TableOfContents()),
+  ],
 }

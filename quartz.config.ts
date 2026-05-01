@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "잼코딩 - 용만쌤 ",
+    pageTitle: "잼코딩 - 용만쌤",
     pageTitleSuffix: "",
     enableSPA: false,
     enablePopovers: true,
@@ -17,7 +17,11 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "ymkim-jamcoding.github.io/jamcoding/",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: [
+      "private",
+      "templates",
+      ".obsidian"
+    ],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
@@ -35,7 +39,9 @@ const config: QuartzConfig = {
           darkgray: "#4e4e4e",
           dark: "#2b2b2b",
           secondary: "#284b63",
-          tertiary: "#84a59d",
+          tertiary: "#F7B523",
+          primary: "#F97315 ",
+          italic: "#81c8db",
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#fff23688",
         },
@@ -46,7 +52,9 @@ const config: QuartzConfig = {
           darkgray: "#d4d4d4",
           dark: "#ebebec",
           secondary: "#7b97aa",
-          tertiary: "#84a59d",
+          tertiary: "#F7B523",
+          primary: "#F97315 ",
+          italic: "#81c8db",
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#b3aa0288",
         },
@@ -72,8 +80,13 @@ const config: QuartzConfig = {
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.Mindmap({
+        markdownLinkResolution: "shortest",
+      })
     ],
-    filters: [Plugin.RemoveDrafts()],
+    filters: [
+      Plugin.RemoveDrafts(),
+    ],
     emitters: [
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),

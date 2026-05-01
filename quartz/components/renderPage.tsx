@@ -17,6 +17,7 @@ interface RenderComponents {
   beforeBody: QuartzComponent[]
   pageBody: QuartzComponent
   afterBody: QuartzComponent[]
+  beforeFooter: QuartzComponent[]
   left: QuartzComponent[]
   right: QuartzComponent[]
   footer: QuartzComponent
@@ -234,6 +235,7 @@ export function renderPage(
     beforeBody,
     pageBody: Content,
     afterBody,
+    beforeFooter,
     left,
     right,
     footer: Footer,
@@ -263,6 +265,7 @@ export function renderPage(
     <html lang={lang} dir={direction}>
       <Head {...componentData} />
       <body data-slug={slug}>
+        <DappledLight />
         <div id="quartz-root" class="page">
           <Body {...componentData}>
             {LeftComponent}
@@ -287,7 +290,15 @@ export function renderPage(
                 ))}
               </div>
             </div>
+
             {RightComponent}
+
+            <div class="before-footer">
+              {beforeFooter.map((BodyComponent) => (
+                <BodyComponent {...componentData} />
+              ))}
+            </div>
+
             <Footer {...componentData} />
           </Body>
         </div>
@@ -299,4 +310,51 @@ export function renderPage(
   )
 
   return "<!DOCTYPE html>\n" + render(doc)
+}
+
+function DappledLight() {
+  return (
+    <div id="dappled-light">
+      <div id="glow"></div>
+      <div id="glow-bounce"></div>
+      <div class="perspective">
+        <div id="leaves"></div>
+        <div id="blinds">
+          <div class="shutters">
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+            <div class="shutter"></div>
+          </div>
+          <div class="vertical">
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </div>
+      </div>
+      <div id="progressive-blur">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  )
 }

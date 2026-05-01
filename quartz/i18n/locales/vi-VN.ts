@@ -41,6 +41,9 @@ export default {
     graph: {
       title: "Sơ đồ",
     },
+    mindmap: {
+      title: "Sơ Đồ Tư Duy",
+    },
     recentNotes: {
       title: "Ghi chú gần đây",
       seeRemainingMore: ({ remaining }) => `Xem thêm ${remaining} ghi chú →`,

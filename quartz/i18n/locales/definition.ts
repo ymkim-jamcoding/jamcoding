@@ -44,6 +44,9 @@ export interface Translation {
     graph: {
       title: string
     }
+    mindmap: {
+      title: string
+    }
     recentNotes: {
       title: string
       seeRemainingMore: (variables: { remaining: number }) => string
