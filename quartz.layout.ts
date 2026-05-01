@@ -20,8 +20,10 @@ export const sharedPageComponents: SharedLayout = {
   footer: Component.Footer({
     links: {
       Home: "/",
+      "잼코딩": "https://jamcoding.co.kr/",
+      "챗북": "https://chatbook.chat/"
       // About: "/About",
-      "Blog source": "https://github.com/ymkim-jamcoding/jamcoding",
+      // "Blog source": "https://github.com/ymkim-jamcoding/jamcoding",
     },
   }),
 }
