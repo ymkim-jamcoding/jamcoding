@@ -8,8 +8,8 @@ title: Jamcoding - 용만쌤 블로그
 
 # Hello Again!
 - 안뇽 칭구들
-	- [[- Basic|- 알고리즘 Basic]]
-	- [[- 4 이산 수학|- 이산 수학]]
+	- [[- 1 Basic|🗺️ -  알고리즘 Basic]]
+	- [[- 4 이산 수학|🗺️ -  이산 수학]]
 
 # News
 - kor

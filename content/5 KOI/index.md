@@ -1,12 +1,12 @@
 ---
 description:
 aliases:
-  - "- KOI"
+  - "- 5 KOI"
 created: 2026-05-01
 modified: 2026-05-01
 tags:
   - moc
 status:
   - 🗺️
-title: "- KOI"
+title: "- 5 KOI"
 ---

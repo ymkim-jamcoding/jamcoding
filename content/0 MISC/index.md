@@ -1,12 +1,12 @@
 ---
 description:
 aliases:
-  - "- MISC"
+  - "- 0 MISC"
 created: 2026-05-01
 modified: 2026-05-01
 tags:
   - moc
 status:
   - 🗺️
-title: "- MISC"
+title: "- 0 MISC"
 ---

@@ -1,10 +1,10 @@
 ---
 description:
 aliases:
-  - "- Basic"
+  - "- 1 Basic"
 created: 2026-05-01
 modified: 2026-05-01
-title: "- Basic"
+title: "- 1 Basic"
 tags:
   - moc
 status:
