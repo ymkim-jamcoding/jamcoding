@@ -295,6 +295,21 @@ h6 {
   }
 }
 
+function getQuartzBasePath(): string {
+  const baseUrl = document
+    .querySelector('meta[property="twitter:domain"]')
+    ?.getAttribute("content")
+
+  if (!baseUrl) return ""
+
+  try {
+    return new URL(`https://${baseUrl}`).pathname.replace(/\/$/, "")
+  } catch (error) {
+    console.warn("Failed to parse Quartz baseUrl from metadata.", error)
+    return ""
+  }
+}
+
 function appendRemark(option: SlideOptions) {
 
   const header = `${document.querySelector(".page-header h1.article-title")?.outerHTML}`
@@ -324,7 +339,7 @@ function appendRemark(option: SlideOptions) {
   document.body.innerHTML = ""
 
   const script = document.createElement("script")
-  script.src = `${window.location.origin}/static/scripts/slide.js`
+  script.src = new URL(`${getQuartzBasePath()}/static/scripts/slide.js`, globalThis.location.origin).toString()
   // script.src = `https://codeyoma.github.io/static/scripts/remark.js`
 
   script.onload = () => {
