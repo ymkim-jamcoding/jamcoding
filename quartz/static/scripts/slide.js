@@ -27290,7 +27290,7 @@ Slide.prototype.expandVariables = function (contentOnly, content, expandResult) 
 var Navigation = require('./slideshow/navigation')
   , Events = require('./slideshow/events')
   , utils = require('../utils')
-  , Slide = require('./slide.js')
+  , Slide = require('./slide')
   , Parser = require('../parser')
   , macros = require('../macros')
   ;
