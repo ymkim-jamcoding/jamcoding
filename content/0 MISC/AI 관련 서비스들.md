@@ -10,3 +10,4 @@ modified: 2026-03-12
 	- [구글 - Quick, Draw!](https://quickdraw.withgoogle.com/?locale=ko)
 	- [Teachable Machine](https://teachablemachine.withgoogle.com/)
 - [Machine Learning for Kids](https://machinelearningforkids.co.uk/#!/about)
+- [Which one is AI, which one is real? The Game.](https://sightengine.com/which-image-is-ai)

@@ -2,12 +2,14 @@
 description:
 aliases:
 created: 2026-03-20
-modified: 2026-05-01
+modified: 2026-05-06
 title: Jamcoding - 용만쌤 블로그
 ---
 
 # Hello Again!
 - 안뇽 칭구들
+	- [백준 문제 보기](https://bojcopy.vercel.app/)
+	- [Tinkercad - Classroom login](https://www.tinkercad.com/joinclass/G3PY3VJ3T)
 
 ## TOC
 - [[- 0 MISC|🗺️ - MISC]]
@@ -35,6 +37,3 @@ title: Jamcoding - 용만쌤 블로그
 	- [Product Hunt – The best new products in tech.](https://www.producthunt.com/)
 	- [Trending repositories on GitHub today · GitHub](https://github.com/trending)
 	- [xkcd: Overton](https://xkcd.com/)
-
-# Tinkercad
-- [Classroom login - Tinkercad](https://www.tinkercad.com/joinclass/G3PY3VJ3T)
