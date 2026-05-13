@@ -8,6 +8,7 @@ title: Jamcoding - 용만쌤 블로그
 
 # Hello Again!
 - 안뇽 칭구들
+	- [[활동해보기]]
 	- [알고리즘 문제 보기](https://joj.kr/)
 	- [Tinkercad - Classroom login](https://www.tinkercad.com/joinclass/G3PY3VJ3T)
 
