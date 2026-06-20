@@ -1,0 +1,2 @@
+- ![Anthropic Analyzed 400,000 Claude Code Sessions — The Surprising Trait of Top AI Users - YouTube](https://www.youtube.com/watch?v=xwfLXs7kqJE)
+- [Agentic coding and persistent returns to expertise \\ Anthropic](https://www.anthropic.com/research/claude-code-expertise)
