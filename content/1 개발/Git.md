@@ -11,3 +11,5 @@ modified: 2026-03-06
 # 활동으로 배우기 
 - [Oh My Git!](https://ohmygit.org/)
 - [Learn Git Branching](https://learngitbranching.js.org/?locale=ko)
+
+[[Mac에서 GitHub 연결]]
