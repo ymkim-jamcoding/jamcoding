@@ -6,7 +6,7 @@ modified: 2026-08-01
 ---
 
 # 참고자료
-- [CCW와 선분 교차 - YouTube](https://www.youtube.com/watch?v=iIDgR5uFy9o&t=376s)
+- ![CCW와 선분 교차 - YouTube](https://www.youtube.com/watch?v=iIDgR5uFy9o&t=376s)
 
 # CCW
 
