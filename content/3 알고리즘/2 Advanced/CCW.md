@@ -90,4 +90,6 @@ def ccw(a, b, c):
 - [선분 교차 2 - 17387](https://joj.kr/problem/17387)
 - [다각형의 면적 - 2166](https://joj.kr/problem/2166)
 - [볼록 껍질 - 1708](https://joj.kr/problem/1708)
+	- a.k.a gift wrap 알고리즘
 	- [그레이엄 스캔 - 위키백과, 우리 모두의 백과사전](https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%A0%88%EC%9D%B4%EC%97%84_%EC%8A%A4%EC%BA%94)
+		- ![그레이엄 스캔](https://upload.wikimedia.org/wikipedia/commons/7/71/GrahamScanDemo.gif)
