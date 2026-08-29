@@ -4,14 +4,14 @@
 
 basic_path="/Users/yoma/Library/Mobile Documents/iCloud~md~obsidian/Documents/Yoma"
 allow_path=(
-  "/@ Projects/잼코딩/blog/0 MISC/"
-  "/@ Projects/잼코딩/blog/1 개발/"
-  "/@ Projects/잼코딩/blog/2 언어/"
-  "/@ Projects/잼코딩/blog/3 알고리즘/"
-  "/@ Projects/잼코딩/blog/4 수학/"
-  "/@ Projects/잼코딩/blog/4 이산 수학/"
-  "/@ Projects/잼코딩/blog/5 KOI/"
-  "/@ Projects/잼코딩/blog/index.md"
+  "/∞ Akashic Records/Done Projects/잼코딩/blog/0 MISC/"
+  "/∞ Akashic Records/Done Projects/잼코딩/blog/1 개발/"
+  "/∞ Akashic Records/Done Projects/잼코딩/blog/2 언어/"
+  "/∞ Akashic Records/Done Projects/잼코딩/blog/3 알고리즘/"
+  "/∞ Akashic Records/Done Projects/잼코딩/blog/4 수학/"
+  "/∞ Akashic Records/Done Projects/잼코딩/blog/4 이산 수학/"
+  "/∞ Akashic Records/Done Projects/잼코딩/blog/5 KOI/"
+  "/∞ Akashic Records/Done Projects/잼코딩/blog/index.md"
 )
 
 output_path=(
